@@ -13,7 +13,9 @@ object Build extends sbt.Build {
         // Mapping from program name -> Main class
         packMain := Map("hello" -> "minproject.Hello"),
         // custom settings here
-        crossPaths := false
+        crossPaths := false,
+
+        libraryDependencies += "org.scalatest" %% "scalatest" % "2.1.0" % "test"
       )
   )
 }
